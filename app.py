@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # создание экземпляра сервера
 app = Flask(__name__)
@@ -13,10 +13,18 @@ def index_page():
     # возврат страницы
     return render_template("index.html") 
 
-@app.route("/product")
+@app.route("/product", methods=["GET", "POST"])
 def product_page():
     # возврат страницы
-    return render_template("product.html") 
+    msg = ""
+    if request.method == "POST":
+        pwd = request.form.get("pwd")
+        salt = request.form.get("salt")
+        num_char = request.form.get("num")
+
+        msg = pwd + salt + num_char
+
+    return render_template("product.html", message=msg) 
 
 
 # точка входа

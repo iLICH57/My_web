@@ -3,10 +3,32 @@
 {% block main %}
 
 <div>
-    <h2>Страница 2</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex accusamus corrupti impedit libero repellendus odio distinctio necessitatibus harum commodi, ea eum adipisci fugit iure, dolore doloribus ullam blanditiis veniam.
-    </p> 
+    <h2>Генератор пароля</h2>
+    <form method="post">
+       <!-- поля ввода данных -->
+        <p>
+            <label>Пароль:</label>
+            <input type="text" name="pwd">
+        </p>
+        <p>
+            <label>Сайт:</label>
+            <input type="text" name="salt">
+        </p>
+        <p>
+            <label>Кол-во символов:</label>
+            <input type="text" name="num" value="-">
+        </p>
+        <!-- кнопка отправки данных -->
+        <p>
+            <input type="submit">
+        </p> 
+           <!-- вывод результата -->
+           <p>
+                {% if message %}
+                    <h3>{{ message }}</h3>
+                {% endif %}
+           </p>
+    </form> 
 </div>
 
 {% endblock %}
