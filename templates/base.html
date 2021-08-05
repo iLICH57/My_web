@@ -15,7 +15,13 @@
 <body>
     
     <header class="menu">
-        <h1>Шапка</h1> 
+        <h1>Stark Inc</h1> 
+        <!-- навигация -->
+        <div class="navigate">
+            <div><a href="{{ url_for('index_page') }}">Home</a></div>
+            <div><a href="{{ url_for('product_page') }}">Product</a></div>
+            <div><a href="{{ url_for('contact_page') }}">Contact</a></div>
+        </div>
     </header>
 
     <!-- основная часть должна быть внутри директив --> 

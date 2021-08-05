@@ -11,6 +11,23 @@ header, footer {
 /* шапка */
 .menu {
     border: 2px solid black;
+    position: relative;
+    display: flex;
+}
+.navigate {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+}
+.navigate a {
+    font-family: 'Ubuntu' 'Arial', sans-serif;
+    color: ghostwhite;
+    margin: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* основная часть */
