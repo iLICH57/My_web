@@ -42,7 +42,7 @@ def product_page():
 
 @app.route("/contact")
 def contact_page():
-    return "<h1>Contact</h1>"
+    return render_template("contact.html")
 
 # точка входа
 if __name__ == "__main__":

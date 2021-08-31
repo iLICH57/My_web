@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
 
+/* универсальный селектор */
+/* *{
+    padding: 50px;
+} */
+body{
+    margin: 0;
+}
 /* шапка и подвал */
 header, footer {
+    padding: 0;
+    margin: 0;
     height: 100px;
     background-color: rgb(16, 87, 63);
     font-family: 'Ubuntu' 'Arial', sans-serif;
     color: rgb(253, 249, 249);
 }
-
 /* шапка */
 .menu {
     border: 2px solid black;
@@ -22,6 +30,10 @@ header, footer {
     justify-content: flex-end; 
     align-items: center; 
 }
+/* псевдокласс состояния который срабатывает при посещении ссылки
+.navigate a:visited{
+    color: rgb(226, 21, 130);   
+} */
 .navigate a {
     font-family: 'Ubuntu' 'Arial', sans-serif;
     color: ghostwhite;
@@ -29,9 +41,50 @@ header, footer {
     text-decoration: none;
     text-transform: uppercase;
 }
+/* Псевдоклассы положения */
+/* .navigate div:first-child {
+    font-size: 20px;
+}
+.navigate div:last-child {
+    font-size: 40px;
+}
+.navigate div:nth-child(odd) {
+    font-size: 12px; */
+} 
+/* псевдокласс который срабатывает при наведении курсора */
+.navigate a:hover {
+    color: rgb(146, 160, 22);
+    /* font-size: 20px; */
+}
+/* псевдокласс состояния который срабатывает при нажатии элемента */
+.navigate a:active{
+    color: rgb(170, 138, 223);
+}
+/* псевдоэлемент */
+/* .navigate div:before {
+    content: "*";
+    color: darkorange;
+}   */
+.navigate div:after {
+    content: "|";
+    color: rgb(218, 231, 158);
+}
+.navigate div:last-child:after {
+    content: none;  
+}
 
 /* основная часть */
 .main {
     background-color: gray;
     height: 700px;
+}
+li:first-child {
+    background-color: brown;
+}
+.generator{ 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
