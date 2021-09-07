@@ -49,8 +49,8 @@ header, footer {
     font-size: 40px;
 }
 .navigate div:nth-child(odd) {
-    font-size: 12px; */
-} 
+    font-size: 12px;
+}  */
 /* псевдокласс который срабатывает при наведении курсора */
 .navigate a:hover {
     color: rgb(146, 160, 22);
@@ -76,15 +76,37 @@ header, footer {
 /* основная часть */
 .main {
     background-color: gray;
-    height: 700px;
+    height: 800px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* position: relative; */
 }
 li:first-child {
     background-color: brown;
 }
 .generator{ 
-    height: 100%;
+    border: 1px solid black;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.generator h2, form {
+    width: 100%;
+}
+.generator h2 {
+    text-align: center;
+}
+.generator form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.generator label {
+    display: inline-block;
+    width: 150px;
 }
