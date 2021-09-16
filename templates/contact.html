@@ -5,15 +5,11 @@
 {% block main %}
 
 <div>
-    <h2>Lorem, ipsum dolor.</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quasi unde corrupti expedita, dignissimos eveniet cupiditate. Eius error numquam saepe earum! Pariatur provident incidunt accusamus, praesentium accusantium quam ipsam? Corporis.
-    </p>
+    <h2>Данные из базы данных</h2>
     <ul>
-        <li>Lorem, ipsum dolor.</li>
-        <li>Lorem, ipsum dolor.</li>
-        <li>Lorem, ipsum dolor.</li>
-        <li>Lorem, ipsum dolor.</li>
+        {% for row in data %}
+        <li>{{ row }}</li>
+        {% endfor %}
     </ul>
 </div>
 
